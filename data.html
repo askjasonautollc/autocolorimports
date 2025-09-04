@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACI – Mix Entry</title>
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { DEFAULT: '#0ea5e9', dark: '#0284c7' } } } } };
+  </script>
+  <style>
+    .halo{background:radial-gradient(50% 50% at 50% 50%,rgba(14,165,233,.18) 0%,rgba(14,165,233,0) 70%);filter:blur(2px)}
+    input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{ -webkit-appearance: none; margin: 0 }
+    input[type="number"]{ -moz-appearance:textfield }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased">
+
+  <section id="mix-entry" class="relative border-t border-neutral-800">
+    <div class="absolute inset-0 halo pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+      <div class="mb-8 flex items-center justify-between">
+        <h1 class="text-2xl font-semibold tracking-tight">Mix Entry</h1>
+        <span class="text-sm text-neutral-400">ACI Lab · v1</span>
+      </div>
+
+      <form id="mixForm" class="grid gap-6">
+        <!-- Header fields -->
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <label class="block text-sm text-neutral-300">YMM
+            <input name="ymm" required placeholder="e.g., 2020 Toyota Corolla" class="mt-1 w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3 py-2 outline-none focus:border-brand" />
+          </label>
+          <label class="block text-sm text-neutral-300">Paint Code
+            <input name="paint_code" required placeholder="e.g., 1F7 / WA8555" class="mt-1 w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3 py-2 outline-none focus:border-brand" />
+          </label>
+          <label class="block text-sm text-neutral-300">Product Quantity
+            <select name="product_quantity" id="batchSize" class="mt-1 w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3 py-2 outline-none focus:border-brand">
+              <option value="half_pint">Half Pint (~236 g)</option>
+              <option value="pint" selected>Pint (~473 g)</option>
+              <option value="quart">Quart (~946 g)</option>
+              <option value="gallon">Gallon (~3785 g)</option>
+            </select>
+          </label>
+          <label class="block text-sm text-neutral-300">Date
+            <input type="date" name="date" id="mixDate" class="mt-1 w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3 py-2 outline-none focus:border-brand" />
+          </label>
+        </div>
+
+        <!-- Components table -->
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-4">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-lg font-medium">Components</h2>
+            <div class="text-xs text-neutral-400">Select product then enter weight in grams</div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-neutral-800 text-left">
+                  <th class="py-2 pr-2">#</th>
+                  <th class="py-2 pr-2">Product</th>
+                  <th class="py-2 pr-2 w-40">Weight (g)</th>
+                </tr>
+              </thead>
+              <tbody id="rows">
+                <!-- 10 fixed rows -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4 grid items-center gap-3 sm:grid-cols-2">
+            <div class="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
+              <div class="text-xs uppercase tracking-wide text-neutral-400">Target (by quantity)</div>
+              <div class="mt-1 text-2xl font-semibold" id="targetG">473 g</div>
+            </div>
+            <div class="rounded-xl border border-neutral-800 bg-neutral-950 p-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-xs uppercase tracking-wide text-neutral-400">Total Sum</div>
+                  <div class="mt-1 text-2xl font-semibold" id="sumG">0.000 g</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs uppercase tracking-wide text-neutral-400">Δ vs Target</div>
+                  <div id="deltaG" class="mt-1 text-lg font-semibold text-amber-400">-473.000 g</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notes & Submit -->
+        <div class="grid gap-4 lg:grid-cols-3">
+          <label class="lg:col-span-2 block text-sm text-neutral-300">Notes (optional)
+            <textarea name="notes" rows="4" placeholder="Any special handling or observations" class="mt-1 w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3 py-2 outline-none focus:border-brand"></textarea>
+          </label>
+          <div class="flex items-end">
+            <button type="submit" class="w-full rounded-xl bg-brand px-5 py-3 text-sm font-semibold hover:bg-brand-dark">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // ---- CONFIG: Full toner list for dropdown ----
+    const PRODUCTS = [
+      '',
+      'AM101 — White','AM102 — Transparent White','AM104 — Jet Black','AM105A — Super Bluish Black','AM106 — Green','AM107 — Yellow Green','AM108 — Golden Green','AM109 — Bright Yellow','AM110 — Lemon Yellow','AM112 — Bright Red','AM113 — Transparent Bright Red','AM114 — Burgundy Red','AM115 — Transparent Red (Blue Phase)','AM115A — Transparent Red (Yellow Phase)','AM116 — Rose Red','AM117 — Maroon Red','AM118 — Oxide Red','AM119 — Transparent Oxide Yellow','AM120 — Transparent Oxide Red','AM122 — Violet','AM123 — Violet Blue','AM125 — Transparent Blue','AM126 — Green Blue','AM131 — Mud Yellow','AM132 — Medium Yellow','AM133 — Brown Red','AM134 — Gorgeous Red','AM137 — Orange Red','AM201 — White','AM203 — Jet Black','AM205 — Lemon Yellow','AM210 — Orange','AM211 — Bright Red','AM213 — Burgundy Red','AM221 — Organic Blue','AM222 — Green','AM301 — Extra White Fine Silver','AM304 — Fine Silver','AM306 — Medium Silver','AM312 — Medium Sparkle Silver','AM315 — Orange Silver','AM316 — Golden Brown Silver','AM317 — Red Silver','AM318 — Blue Silver','AM401 — Fine White Pearl','AM402 — White Pearl','AM403 — Coarse White Pearl','AM405 — Red Cooper Pearl','AM406 — Fine Red Pearl','AM407 — Red Pearl','AM408 — Fine Blue Pearl','AM409 — Blue Pearl','AM410 — Green Pearl','AM413 — Pure Yellow Pearl','AM414 — Violet Pearl','AM416 — Interference Red Pearl','AM421 — Crystal White Pearl','AM423 — Crystal Red Pearl','AM424 — Crystal Blue Pearl','AM425 — Crystal Golden Pearl','AM426 — Crystal Green Pearl','AM428 — Interference Red Crystal','AM443 — Amber Orange Pearl','AMB1K — 1K Binder','AMFC1K — 1K Flip Controller','BN120 — Flip Controller (NB180)'
+    ];
+    const BATCH_TO_GRAMS = { half_pint: 236, pint: 473, quart: 946, gallon: 3785 };
+
+    // populate date default
+    document.getElementById('mixDate').valueAsDate = new Date();
+
+    // build 10 rows
+    const tbody = document.getElementById('rows');
+    for (let i = 0; i < 10; i++) {
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-neutral-800 last:border-0';
+      tr.innerHTML = `
+        <td class="py-2 pr-2 w-8">${i+1}</td>
+        <td class="py-2 pr-2">
+          <select name="product_${i+1}" class="w-full rounded-xl border border-neutral-800 bg-neutral-950 px-3 py-2 outline-none focus:border-brand">
+            ${PRODUCTS.map(p => `<option value="${p.split(' — ')[0]}">${p}</option>`).join('')}
+          </select>
+        </td>
+        <td class="py-2 pr-2">
+          <input type="number" step="0.001" min="0" name="weight_${i+1}" class="w-40 rounded-xl border border-neutral-800 bg-neutral-950 px-3 py-2 text-right outline-none focus:border-brand" placeholder="0.000" />
+        </td>`;
+      tbody.appendChild(tr);
+    }
+
+    const sumEl = document.getElementById('sumG');
+    const deltaEl = document.getElementById('deltaG');
+    const targetEl = document.getElementById('targetG');
+    const batchSel = document.getElementById('batchSize');
+
+    function recalc() {
+      const weights = [...document.querySelectorAll('input[name^="weight_"]')].map(i => parseFloat(i.value)||0);
+      const sum = weights.reduce((a,b)=>a+b,0);
+      const target = BATCH_TO_GRAMS[batchSel.value];
+      const delta = sum - target;
+      sumEl.textContent = sum.toFixed(3) + ' g';
+      deltaEl.textContent = (delta>=0?'+':'') + delta.toFixed(3) + ' g';
+      deltaEl.className = 'mt-1 text-lg font-semibold ' + (Math.abs(delta) < 0.5 ? 'text-green-400' : 'text-amber-400');
+      targetEl.textContent = target + ' g';
+    }
+
+    batchSel.addEventListener('change', recalc);
+    document.getElementById('rows').addEventListener('input', e => {
+      if (e.target.matches('input[type="number"]')) recalc();
+    });
+    recalc();
+
+    // Prevent accidental submit for demo
+    document.getElementById('mixForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      // Replace with your Supabase insert later
+      alert('Form captured. Wire to Supabase insert next.');
+    });
+  </script>
+</body>
+</html>
