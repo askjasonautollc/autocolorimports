@@ -1,5 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/data", "destination": "/data.html" }
-  ]
+"rewrites": [
+{ "source": "/data", "destination": "/data.html" },
+{ "source": "/mission", "destination": "/mission.html" },
+{ "source": "/luna", "destination": "/Luna.html" },
+{ "source": "/tech", "destination": "/tech.html" },
+{ "source": "/privacy", "destination": "/privacy.html" },
+{ "source": "/terms", "destination": "/terms.html" }
+]
 }
