@@ -29,12 +29,12 @@
         extend: {
           colors: {
             brand: {
-              DEFAULT: '#A3E635', // Vibrant lime green from logo
-              dark: '#84CC16',   // Darker lime for hover
+              DEFAULT: '#A3E635', // Vibrant lime green
+              dark: '#84CC16',
             },
             neutral: {
                 ...tailwind.theme.colors.neutral,
-                '950': '#121212', // Deeper black to match app
+                '950': '#121212',
             }
           },
           fontFamily: {
@@ -45,8 +45,7 @@
       }
     }
   </script>
-
-  <!-- Custom Halo Effect Style -->
+  
   <style>
     .halo{background:radial-gradient(50% 50% at 50% 50%,rgba(163, 230, 53, 0.15) 0%,rgba(163, 230, 53, 0) 70%);filter:blur(2px);}
   </style>
@@ -60,134 +59,117 @@
           <img src="images/autocolorlogo.png" alt="Auto Color Imports logo" class="h-8 w-8" />
           <span class="text-lg font-heading font-bold">Auto Color Imports</span>
         </a>
+        
+        <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
           <a href="mission.html" class="hover:text-brand" data-translate="nav_mission">Our Mission</a>
           <a href="Luna.html" class="hover:text-brand" data-translate="nav_brands">Our Brands</a>
           <a href="tech.html" class="hover:text-brand" data-translate="nav_tech">The Technology</a>
-          <a href="mailto:admin@autocolorimports.com" class="hover:text-brand" data-translate="nav_contact">Contact</a>
+          <a href="#contact" class="hover:text-brand" data-translate="nav_contact">Contact</a>
         </nav>
+
         <div class="flex items-center gap-4">
             <button id="lang-toggle" class="text-sm font-semibold text-brand hover:text-brand-dark">Español</button>
-            <a href="mailto:admin@autocolorimports.com" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+            <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+            
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:text-white hover:bg-neutral-800">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
       </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-800">
+        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_mission">Our Mission</a>
+            <a href="Luna.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_brands">Our Brands</a>
+            <a href="tech.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_tech">The Technology</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_contact">Contact</a>
+        </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 halo"></div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20">
-      <div class="grid items-center gap-12 lg:grid-cols-2">
-        <div class="text-center">
-          <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="w-full max-w-md mb-8 mx-auto rounded-2xl" />
-          <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="hero_h1">
-            The Future of Color is Here.
-            <br class="hidden sm:block" />
-            <span class="text-brand" data-translate="hero_h1_span">Data-Driven & AI-Powered.</span>
-          </h1>
-          <p class="mt-4 text-lg text-neutral-300" data-translate="hero_p">
-            We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray (Delta E < 1.5). By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-4 justify-center">
-            <a href="tech.html" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark" data-translate="hero_btn1">Learn About the Tech</a>
-            <a href="mailto:admin@autocolorimports.com" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white" data-translate="hero_btn2">Get in Touch</a>
-          </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 halo"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div class="mb-8">
+            <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="mx-auto h-28 rounded-2xl" />
         </div>
-        <div class="relative">
-          <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 shadow-2xl">
-            <img
-              src="images/lunascanner.jpg"
-              alt="Technician using a spectrometer on a car panel"
-              class="h-full w-full object-cover"
-            />
-          </div>
+        <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="hero_h1">
+          The Future of Color is Here.
+        </h1>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-300" data-translate="hero_p">
+            We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray (Delta E < 1.5). By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="tech.html" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark" data-translate="hero_btn1">Learn About the Tech</a>
+          <a href="#contact" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-neutral-900" data-translate="hero_btn2">Get in Touch</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Our Mission -->
-  <section id="mission" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center">
-            <h2 class="font-heading text-3xl font-bold tracking-tight" data-translate="mission_h2">Our Mission: Precision, Value, and Innovation</h2>
-            <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="mission_p">
-                To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value. We are committed to building a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.
-            </p>
-        </div>
-    </div>
-  </section>
+    <!-- Our Mission Snippet -->
+    <section id="mission" class="border-t border-neutral-800 bg-neutral-900">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+          <div class="text-center">
+              <h2 class="font-heading text-3xl font-bold tracking-tight" data-translate="mission_h2">Our Mission: Precision, Value, and Innovation</h2>
+              <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="mission_p">
+                  To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value, all powered by a smarter, technology-driven workflow.
+              </p>
+          </div>
+      </div>
+    </section>
 
-  <!-- Our Brands -->
-  <section id="brands" class="border-t border-neutral-800 bg-neutral-900">
-    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
-        <div class="grid items-center gap-12 md:grid-cols-2">
-            <div class="text-center">
-                <h2 class="font-heading text-3xl font-bold" data-translate="brands_h2">Introducing the Luna Base Paint Line</h2>
-                <p class="mt-4 text-neutral-300" data-translate="brands_p">Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.</p>
-                <div class="mt-6">
-                    <a href="mailto:admin@autocolorimports.com" class="text-sm font-semibold text-brand hover:text-brand-dark" data-translate="brands_link">Become a Partner →</a>
+    <!-- Location & Shipping Section -->
+    <section id="location" class="border-t border-neutral-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl border border-neutral-800 bg-neutral-900 overflow-hidden">
+                    <img src="images/lunascanner.jpg" alt="Technician using a spectrometer on a car panel" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="font-heading text-3xl font-bold" data-translate="location_h2">Based in Florida, Shipping Nationwide</h2>
+                    <p class="mt-4 text-lg text-neutral-300" data-translate="location_p">
+                        Our headquarters, lab, and primary warehouse are located in Orlando, FL, strategically positioned to serve the Southeast region. However, we are experienced and fully capable of shipping complete, ready-to-operate paint tint lines across all 48 contiguous states.
+                    </p>
                 </div>
             </div>
-            <div class="flex justify-center rounded-2xl bg-white/5 p-8">
-                <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="rounded-2xl max-h-40" />
-            </div>
         </div>
-    </div>
-  </section>
-
-  <!-- The Technology -->
-  <section id="technology" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-      <div class="text-center">
-        <h2 class="font-heading text-3xl font-bold tracking-tight" data-translate="tech_h2">The Technology Behind the Match</h2>
-        <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="tech_p">
-          Our system is built on a foundation of real-world data, collected by expert painters via our proprietary mobile app.
-        </p>
-      </div>
-      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="text-center rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
-          <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card1_h3">1. Expert Data Collection</h3>
-          <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card1_p">Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.</p>
-        </div>
-        <div class="text-center rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
-          <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card2_h3">2. AI Model Training</h3>
-          <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card2_p">This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.</p>
-        </div>
-        <div class="text-center rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
-          <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card3_h3">3. Predictive Formulation</h3>
-          <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card3_p">The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate (Delta E < 1.5).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section id="contact" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
-      <h2 class="font-heading text-3xl font-bold" data-translate="contact_h2">Get in Touch</h2>
-      <p class="mt-2 text-neutral-400" data-translate="contact_p">Have a question about our technology, our paint lines, or becoming a partner? Let us know.</p>
-      
-      <form action="https://formspree.io/f/xandkjdq" method="POST" class="mt-8 space-y-4 text-left">
-        <div class="grid gap-4 sm:grid-cols-2">
-          <label class="block text-sm text-neutral-300" data-translate="form_name">Name
-            <input name="name" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
+    </section>
+    
+    <!-- Contact Form -->
+    <section id="contact" class="border-t border-neutral-800 bg-neutral-900">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <h2 class="font-heading text-3xl font-bold" data-translate="contact_h2">Get in Touch</h2>
+        <p class="mt-2 text-neutral-400" data-translate="contact_p">Have a question about our technology, our paint lines, or becoming a partner? Let us know.</p>
+        
+        <form action="https://formspree.io/f/xandkjdq" method="POST" class="mt-8 space-y-4 text-left">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block text-sm text-neutral-300" data-translate="form_name">Name
+              <input name="name" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-950 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
+            </label>
+            <label class="block text-sm text-neutral-300" data-translate="form_email">Email
+              <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-950 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
+            </label>
+          </div>
+          <label class="block text-sm text-neutral-300" data-translate="form_message">Your Message
+            <textarea name="message" rows="5" placeholder="I'd like to know more about..." class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-950 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" data-translate="form_placeholder"></textarea>
           </label>
-          <label class="block text-sm text-neutral-300" data-translate="form_email">Email
-            <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
-          </label>
-        </div>
-        <label class="block text-sm text-neutral-300" data-translate="form_message">Your Message
-          <textarea name="message" rows="5" placeholder="I'd like to know more about..." class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" data-translate="form_placeholder"></textarea>
-        </label>
-        <div class="text-center">
-            <button class="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-brand-dark" data-translate="form_send">Send Message</button>
-            <p class="text-xs text-neutral-500 pt-1" data-translate="form_or_email">Or email us directly at <a class="underline text-brand hover:text-brand-dark" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
-        </div>
-      </form>
-    </div>
-  </section>
+          <div class="text-center">
+            <button class="rounded-xl bg-brand px-8 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark" data-translate="form_send">Send Message</button>
+            <p class="text-xs text-neutral-500 pt-4" data-translate="form_or_email">Or email us directly at <a class="underline hover:text-brand" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="border-t border-neutral-800">
@@ -203,6 +185,13 @@
   </footer>
 
   <script>
+    // Script for mobile menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
     document.getElementById('y').textContent = new Date().getFullYear();
 
     const translations = {
@@ -213,23 +202,13 @@
             nav_contact: 'Contact',
             btn_ask: 'Ask a Question',
             hero_h1: 'The Future of Color is Here.',
-            hero_h1_span: 'Data-Driven & AI-Powered.',
             hero_p: "We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray (Delta E < 1.5). By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.",
             hero_btn1: 'Learn About the Tech',
             hero_btn2: 'Get in Touch',
             mission_h2: 'Our Mission: Precision, Value, and Innovation',
-            mission_p: 'To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value. We are committed to building a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.',
-            brands_h2: 'Introducing the Luna Base Paint Line',
-            brands_p: 'Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.',
-            brands_link: 'Become a Partner →',
-            tech_h2: 'The Technology Behind the Match',
-            tech_p: 'Our system is built on a foundation of real-world data, collected by expert painters via our proprietary mobile app.',
-            tech_card1_h3: '1. Expert Data Collection',
-            tech_card1_p: 'Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.',
-            tech_card2_h3: '2. AI Model Training',
-            tech_card2_p: 'This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.',
-            tech_card3_h3: '3. Predictive Formulation',
-            tech_card3_p: 'The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate (Delta E < 1.5).',
+            mission_p: 'To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value, all powered by a smarter, technology-driven workflow.',
+            location_h2: 'Based in Florida, Shipping Nationwide',
+            location_p: 'Our headquarters, lab, and primary warehouse are located in Orlando, FL, strategically positioned to serve the Southeast region. However, we are experienced and fully capable of shipping complete, ready-to-operate paint tint lines across all 48 contiguous states.',
             contact_h2: 'Get in Touch',
             contact_p: 'Have a question about our technology, our paint lines, or becoming a partner? Let us know.',
             form_name: 'Name',
@@ -248,23 +227,13 @@
             nav_contact: 'Contacto',
             btn_ask: 'Hacer una Pregunta',
             hero_h1: 'El Futuro del Color está Aquí.',
-            hero_h1_span: 'Impulsado por Datos e IA.',
             hero_p: 'Estamos construyendo un sistema revolucionario de pintura automotriz diseñado para ofrecer una coincidencia del 95% o más en la primera aplicación (Delta E < 1.5). Aprovechando datos de expertos e inteligencia artificial, estamos creando un flujo de trabajo más inteligente que ahorra tiempo y reduce el desperdicio de material.',
             hero_btn1: 'Conoce la Tecnología',
             hero_btn2: 'Ponte en Contacto',
             mission_h2: 'Nuestra Misión: Precisión, Valor e Innovación',
-            mission_p: 'Proveer a los profesionales automotrices con tintes de alta calidad de origen global a un valor excepcional. Estamos comprometidos a construir un flujo de trabajo más inteligente y eficiente para el taller moderno integrando tecnología de punta con experiencia práctica.',
-            brands_h2: 'Presentamos la Línea de Pintura Luna Base',
-            brands_p: 'Luna Base es nuestra línea principal de bases, transparentes, imprimadores y toners, diseñada para una calidad y valor excepcionales. Sirve como la base de nuestra recopilación de datos y desarrollo de IA, preparando el camino para una nueva generación de soluciones de color inteligentes.',
-            brands_link: 'Conviértete en Socio →',
-            tech_h2: 'La Tecnología Detrás de la Coincidencia',
-            tech_p: 'Nuestro sistema se basa en una fundación de datos del mundo real, recopilados por pintores expertos a través de nuestra aplicación móvil patentada.',
-            tech_card1_h3: '1. Recopilación de Datos por Expertos',
-            tech_card1_p: 'Nuestra aplicación ACI Color Match permite a los técnicos expertos registrar cada detalle de sus exitosas coincidencias manuales, creando un conjunto de datos de alta fidelidad.',
-            tech_card2_h3: '2. Entrenamiento de Modelos de IA',
-            tech_card2_p: 'Estos datos se utilizan de forma anónima para entrenar nuestros modelos de IA de próxima generación, enseñándoles los matices sutiles de la formulación de colores que van más allá de las simples lecturas de espectro.',
-            tech_card3_h3: '3. Formulación Predictiva',
-            tech_card3_p: 'El resultado es un sistema que puede predecir fórmulas de alta precisión para nuevos colores, logrando nuestro objetivo de una tasa de coincidencia del 95% o más al primer intento (Delta E < 1.5).',
+            mission_p: 'Proveer a los profesionales automotrices con tintes de alta calidad de origen global a un valor excepcional, todo impulsado por un flujo de trabajo más inteligente y tecnológico.',
+            location_h2: 'Ubicados en Florida, con Envío a Nivel Nacional',
+            location_p: 'Nuestra sede, laboratorio y almacén principal se encuentran en Orlando, FL, estratégicamente posicionados para servir a la región sureste. Sin embargo, tenemos experiencia y plena capacidad para enviar líneas completas de tintes de pintura, listas para operar, a los 48 estados contiguos.',
             contact_h2: 'Ponte en Contacto',
             contact_p: '¿Tienes alguna pregunta sobre nuestra tecnología, nuestras líneas de pintura o cómo convertirte en socio? Háznoslo saber.',
             form_name: 'Nombre',
@@ -288,7 +257,6 @@
                 if(el.tagName === 'TEXTAREA' && el.placeholder) {
                     el.placeholder = translations[lang][key];
                 } else if (el.tagName === 'LABEL') {
-                    // Update text node directly to not remove the input
                     el.childNodes[0].nodeValue = translations[lang][key] + ' ';
                 } 
                 else {
