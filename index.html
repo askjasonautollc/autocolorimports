@@ -1,53 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Auto Color Imports – Automotive Paint, Color Matching & Mixing Systems</title>
-  <meta name="description" content="Premium automotive paint supplies, custom color matching, and automated mixing solutions. Wholesale and retail with fast shipping." />
+  <title>Auto Color Imports – The Future of Automotive Color Matching</title>
+  <meta name="description" content="Leveraging data and technology to create a smarter, more efficient paint formulation system with a 95% first-time match goal." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Auto Color Imports" />
-  <meta property="og:description" content="Automotive paint supplies, custom color matching, and automated mixing systems." />
+  <meta property="og:title" content="Auto Color Imports – The Future of Color" />
+  <meta property="og:description" content="Developing a new generation of automotive paint solutions powered by data and AI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://autocolorimports.com/" />
-  <meta property="og:image" content="https://autocolorimports.com/images/colorpanel.jpg" />
+  <meta property="og:image" content="https://images.pexels.com/photos/4173250/pexels-photo-4173250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
 
   <link rel="canonical" href="https://autocolorimports.com/" />
   <link rel="icon" href="images/autocolorlogo.png" />
 
-  <!-- Tailwind (CDN) -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) & Custom Theme -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { DEFAULT: '#0ea5e9', dark: '#0284c7' } }
+          colors: {
+            brand: {
+              DEFAULT: '#A3E635', // Vibrant lime green from logo
+              dark: '#84CC16',   // Darker lime for hover
+            },
+            neutral: {
+                ...tailwind.theme.colors.neutral,
+                '950': '#121212', // Deeper black to match app
+            }
+          },
+          fontFamily: {
+            sans: ['Readex Pro', 'sans-serif'],
+            heading: ['Orbitron', 'sans-serif'],
+          }
         }
       }
     }
   </script>
 
+  <!-- Custom Halo Effect Style -->
   <style>
-    .halo{background:radial-gradient(50% 50% at 50% 50%,rgba(14,165,233,.18) 0%,rgba(14,165,233,0) 70%);filter:blur(2px);}
+    .halo{background:radial-gradient(50% 50% at 50% 50%,rgba(163, 230, 53, 0.15) 0%,rgba(163, 230, 53, 0) 70%);filter:blur(2px);}
   </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100 antialiased">
+<body class="bg-neutral-950 text-neutral-100 antialiased font-sans">
   <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/70 backdrop-blur">
+  <header class="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-lg">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <a href="/" class="flex items-center gap-3">
-          <img src="images/autocolorlogo.png" alt="Auto Color Imports logo" class="h-8 w-8" loading="eager" decoding="async" />
-          <span class="text-lg font-semibold">Auto Color Imports</span>
+          <img src="images/autocolorlogo.png" alt="Auto Color Imports logo" class="h-8 w-8" />
+          <span class="text-lg font-heading font-bold">Auto Color Imports</span>
         </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#products" class="hover:text-brand">Products</a>
-          <a href="#services" class="hover:text-brand">Services</a>
-          <a href="#systems" class="hover:text-brand">Mixing Systems</a>
-          <a href="#quote" class="hover:text-brand">Request Quote</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a href="#mission" class="hover:text-brand">Our Mission</a>
+          <a href="#brands" class="hover:text-brand">Our Brands</a>
+          <a href="#technology" class="hover:text-brand">The Technology</a>
+          <a href="#contact" class="hover:text-brand">Contact</a>
         </nav>
-        <a href="#quote" class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-medium hover:bg-brand-dark">Get a Quote</a>
+        <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-neutral-800 hover:bg-brand-dark">Ask a Question</a>
       </div>
     </div>
   </header>
@@ -56,119 +75,110 @@
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 halo"></div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20">
-      <div class="grid items-center gap-10 lg:grid-cols-2">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
-            Premium Automotive Paint &<br class="hidden sm:block" />
-            <span class="text-brand">Automated Mixing Solutions</span>
+          <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+            The Future of Color is Here.
+            <br class="hidden sm:block" />
+            <span class="text-brand">Data-Driven & AI-Powered.</span>
           </h1>
-          <p class="mt-4 text-neutral-300">
-            Quality basecoats, clears, primers, and consumables—plus custom color matching and automated tint-mix options for busy shops.
+          <p class="mt-4 text-lg text-neutral-300">
+            We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray. By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.
           </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#products" class="rounded-xl bg-brand px-5 py-3 text-sm font-semibold hover:bg-brand-dark">Shop Categories</a>
-            <a href="#systems" class="rounded-xl border border-neutral-700 px-5 py-3 text-sm font-semibold hover:border-neutral-500">See Mixing Systems</a>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#technology" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-neutral-800 hover:bg-brand-dark shadow-[0_0_20px_rgba(163,230,53,0.5)]">Learn About the Tech</a>
+            <a href="#contact" class="rounded-xl border-2 border-neutral-700 px-6 py-3 text-sm font-semibold hover:border-neutral-500 hover:text-white">Get in Touch</a>
           </div>
-          <dl class="mt-8 grid grid-cols-2 gap-6 text-sm text-neutral-400 sm:grid-cols-4">
-            <div><dt class="font-semibold text-neutral-200">Lead Time</dt><dd>Fast shipping</dd></div>
-            <div><dt class="font-semibold text-neutral-200">MOQ</dt><dd>Flexible wholesale</dd></div>
-            <div><dt class="font-semibold text-neutral-200">Matching</dt><dd>Spectro + visual</dd></div>
-            <div><dt class="font-semibold text-neutral-200">Support</dt><dd>Tech guidance</dd></div>
-          </dl>
         </div>
         <div class="relative">
-          <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900">
+          <div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 shadow-2xl">
             <img
-              src="images/colorpanel.jpg"
-              alt="Color panels for automotive paint matching"
+              src="https://images.pexels.com/photos/8986161/pexels-photo-8986161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Technician using a spectrometer on a car panel"
               class="h-full w-full object-cover"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
             />
           </div>
-          
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What we do -->
-  <section id="services" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl font-semibold">What we do</h2>
-      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-          <h3 class="font-semibold">Custom Color Matching</h3>
-          <p class="mt-2 text-sm text-neutral-400">Spectro capture + expert adjustment for accurate blends on OEM and custom finishes.</p>
+  <!-- Our Mission -->
+  <section id="mission" class="border-t border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center">
+            <h2 class="font-heading text-3xl font-bold tracking-tight">Our Mission: Precision, Value, and Innovation</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400">
+                To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value. We are committed to building a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.
+            </p>
         </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-          <h3 class="font-semibold">Automated Mixing Options</h3>
-          <p class="mt-2 text-sm text-neutral-400">From compact assistants to fully automated solutions for high throughput.</p>
+    </div>
+  </section>
+
+  <!-- Our Brands -->
+  <section id="brands" class="border-t border-neutral-800 bg-neutral-900">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+            <div>
+                <h2 class="font-heading text-3xl font-bold">Introducing the Luna Base Paint Line</h2>
+                <p class="mt-4 text-neutral-300">Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.</p>
+                <div class="mt-6">
+                    <a href="#contact" class="text-sm font-semibold text-brand hover:text-brand-dark">Become a Partner →</a>
+                </div>
+            </div>
+            <div class="flex justify-center rounded-2xl bg-white/5 p-8">
+                <img src="images/LunaLogo.jpeg" alt="Luna Base Automotive Paint Logo" class="rounded-2xl max-h-40" />
+            </div>
         </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-          <h3 class="font-semibold">Wholesale Supply</h3>
-          <p class="mt-2 text-sm text-neutral-400">Basecoats, clears, primers, reducers, abrasives, masking & shop essentials.</p>
+    </div>
+  </section>
+
+  <!-- The Technology -->
+  <section id="technology" class="border-t border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <h2 class="font-heading text-3xl font-bold tracking-tight">The Technology Behind the Match</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400">
+          Our system is built on a foundation of real-world data, collected by expert painters via our proprietary mobile app.
+        </p>
+      </div>
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
+          <h3 class="font-heading font-bold text-lg text-brand">1. Expert Data Collection</h3>
+          <p class="mt-2 text-sm text-neutral-400">Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
+          <h3 class="font-heading font-bold text-lg text-brand">2. AI Model Training</h3>
+          <p class="mt-2 text-sm text-neutral-400">This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
+          <h3 class="font-heading font-bold text-lg text-brand">3. Predictive Formulation</h3>
+          <p class="mt-2 text-sm text-neutral-400">The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl font-semibold">Shop categories</h2>
-      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <a class="group rounded-2xl border border-neutral-800 bg-neutral-900 p-5 hover:border-neutral-600" href="#"><div class="aspect-[4/3] rounded-xl bg-neutral-800"></div><div class="mt-4 flex items-center justify-between"><span class="font-medium">Basecoat & Toners</span><span class="text-xs text-neutral-400 group-hover:text-neutral-300">View</span></div></a>
-        <a class="group rounded-2xl border border-neutral-800 bg-neutral-900 p-5 hover:border-neutral-600" href="#"><div class="aspect-[4/3] rounded-xl bg-neutral-800"></div><div class="mt-4 flex items-center justify-between"><span class="font-medium">Clearcoats & Hardeners</span><span class="text-xs text-neutral-400 group-hover:text-neutral-300">View</span></div></a>
-        <a class="group rounded-2xl border border-neutral-800 bg-neutral-900 p-5 hover:border-neutral-600" href="#"><div class="aspect-[4/3] rounded-xl bg-neutral-800"></div><div class="mt-4 flex items-center justify-between"><span class="font-medium">Primers & Sealers</span><span class="text-xs text-neutral-400 group-hover:text-neutral-300">View</span></div></a>
-        <a class="group rounded-2xl border border-neutral-800 bg-neutral-900 p-5 hover:border-neutral-600" href="#"><div class="aspect-[4/3] rounded-xl bg-neutral-800"></div><div class="mt-4 flex items-center justify-between"><span class="font-medium">Abrasives & Tape</span><span class="text-xs text-neutral-400 group-hover:text-neutral-300">View</span></div></a>
-      </div>
-      <div class="mt-8">
-        <a href="#quote" class="inline-flex items-center rounded-xl bg-brand px-5 py-3 text-sm font-semibold hover:bg-brand-dark">Request wholesale pricing</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mixing Systems -->
-  <section id="systems" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl font-semibold">Mixing systems & automation</h2>
-      <div class="mt-6 grid gap-6 lg:grid-cols-2">
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-          <h3 class="font-semibold">Automated tint dispensing</h3>
-          <p class="mt-2 text-sm text-neutral-400">Programmable dispensing with recipe control and batch logs. Reduce waste, increase consistency, and speed up refinish workflows.</p>
-        </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-          <h3 class="font-semibold">Color tools</h3>
-          <p class="mt-2 text-sm text-neutral-400">Spectro capture, visual verification, and spray-out tracking to tighten the match loop and reduce rework.</p>
-        </div>
-      </div>
-      <div class="mt-6">
-        <a href="#quote" class="rounded-xl border border-neutral-700 px-5 py-3 text-sm font-semibold hover:border-neutral-500">Ask about automation</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote -->
-  <section id="quote" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl font-semibold">Request a quote</h2>
-      <p class="mt-2 text-sm text-neutral-400">Tell us your colors, volumes, and timeline. We’ll reply fast.</p>
-      <form action="https://formspree.io/f/your-id" method="POST" class="mt-6 space-y-4">
+  <!-- Contact Form -->
+  <section id="contact" class="border-t border-neutral-800">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
+      <h2 class="font-heading text-3xl font-bold">Get in Touch</h2>
+      <p class="mt-2 text-neutral-400">Have a question about our technology, our paint lines, or becoming a partner? Let us know.</p>
+      
+      <form action="https://formspree.io/f/YOUR_FORMPSREE_ID" method="POST" class="mt-8 space-y-4">
         <div class="grid gap-4 sm:grid-cols-2">
           <label class="block text-sm text-neutral-300">Name
-            <input name="name" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:border-brand" />
+            <input name="name" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
           </label>
           <label class="block text-sm text-neutral-300">Email
-            <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:border-brand" />
+            <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
           </label>
         </div>
-        <label class="block text-sm text-neutral-300">What are you looking for?
-          <textarea name="message" rows="5" placeholder="e.g., 3L metallic blue basecoat, HS clear + hardener, automation options" class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:border-brand"></textarea>
+        <label class="block text-sm text-neutral-300">Your Message
+          <textarea name="message" rows="5" placeholder="I'd like to know more about..." class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand"></textarea>
         </label>
-        <button class="rounded-xl bg-brand px-5 py-3 text-sm font-semibold hover:bg-brand-dark">Send Request</button>
-        <p class="text-xs text-neutral-500 mt-2">Or email <a class="underline hover:text-neutral-300" href="mailto:sales@autocolorimports.com">admin@autocolorimports.com</a></p>
+        <button class="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-neutral-800 hover:bg-brand-dark">Send Message</button>
+        <p class="text-xs text-neutral-500 pt-1">Or email us directly at <a class="underline hover:text-neutral-300" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
       </form>
     </div>
   </section>
@@ -177,11 +187,10 @@
   <footer class="border-t border-neutral-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-neutral-400">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p>© <span id="y"></span> Auto Color Imports. All rights reserved.</p>
+        <p>© <span id="y"></span> Auto Color Imports LLC. All rights reserved.</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-neutral-200">Privacy</a>
-          <a href="#" class="hover:text-neutral-200">Terms</a>
-          <a href="#quote" class="hover:text-neutral-200">Contact</a>
+          <a href="#" class="hover:text-neutral-200">Privacy Policy</a>
+          <a href="#" class="hover:text-neutral-200">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -190,3 +199,5 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+
