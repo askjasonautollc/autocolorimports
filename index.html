@@ -61,12 +61,15 @@
           <span class="text-lg font-heading font-bold">Auto Color Imports</span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
-          <a href="#mission" class="hover:text-brand">Our Mission</a>
-          <a href="#brands" class="hover:text-brand">Our Brands</a>
-          <a href="#technology" class="hover:text-brand">The Technology</a>
-          <a href="#contact" class="hover:text-brand">Contact</a>
+          <a href="#mission" class="hover:text-brand" data-translate="nav_mission">Our Mission</a>
+          <a href="#brands" class="hover:text-brand" data-translate="nav_brands">Our Brands</a>
+          <a href="#technology" class="hover:text-brand" data-translate="nav_tech">The Technology</a>
+          <a href="#contact" class="hover:text-brand" data-translate="nav_contact">Contact</a>
         </nav>
-        <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-neutral-900 hover:bg-brand-dark">Ask a Question</a>
+        <div class="flex items-center gap-4">
+            <button id="lang-toggle" class="text-sm font-semibold text-brand hover:text-brand-dark">Español</button>
+            <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-neutral-900 hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+        </div>
       </div>
     </div>
   </header>
@@ -77,17 +80,17 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20">
       <div class="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="hero_h1">
             The Future of Color is Here.
             <br class="hidden sm:block" />
-            <span class="text-brand">Data-Driven & AI-Powered.</span>
+            <span class="text-brand" data-translate="hero_h1_span">Data-Driven & AI-Powered.</span>
           </h1>
-          <p class="mt-4 text-lg text-neutral-300">
+          <p class="mt-4 text-lg text-neutral-300" data-translate="hero_p">
             We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray. By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.
           </p>
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#technology" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark">Learn About the Tech</a>
-            <a href="#contact" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-neutral-900">Get in Touch</a>
+            <a href="#technology" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark" data-translate="hero_btn1">Learn About the Tech</a>
+            <a href="#contact" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-neutral-900" data-translate="hero_btn2">Get in Touch</a>
           </div>
         </div>
         <div class="relative">
@@ -107,8 +110,8 @@
   <section id="mission" class="border-t border-neutral-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div class="text-center">
-            <h2 class="font-heading text-3xl font-bold tracking-tight">Our Mission: Precision, Value, and Innovation</h2>
-            <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400">
+            <h2 class="font-heading text-3xl font-bold tracking-tight" data-translate="mission_h2">Our Mission: Precision, Value, and Innovation</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="mission_p">
                 To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value. We are committed to building a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.
             </p>
         </div>
@@ -120,10 +123,10 @@
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid items-center gap-12 md:grid-cols-2">
             <div>
-                <h2 class="font-heading text-3xl font-bold">Introducing the Luna Base Paint Line</h2>
-                <p class="mt-4 text-neutral-300">Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.</p>
+                <h2 class="font-heading text-3xl font-bold" data-translate="brands_h2">Introducing the Luna Base Paint Line</h2>
+                <p class="mt-4 text-neutral-300" data-translate="brands_p">Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.</p>
                 <div class="mt-6">
-                    <a href="#contact" class="text-sm font-semibold text-brand hover:text-brand-dark">Become a Partner →</a>
+                    <a href="#contact" class="text-sm font-semibold text-brand hover:text-brand-dark" data-translate="brands_link">Become a Partner →</a>
                 </div>
             </div>
             <div class="flex justify-center rounded-2xl bg-white/5 p-8">
@@ -137,23 +140,23 @@
   <section id="technology" class="border-t border-neutral-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
       <div class="text-center">
-        <h2 class="font-heading text-3xl font-bold tracking-tight">The Technology Behind the Match</h2>
-        <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400">
+        <h2 class="font-heading text-3xl font-bold tracking-tight" data-translate="tech_h2">The Technology Behind the Match</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="tech_p">
           Our system is built on a foundation of real-world data, collected by expert painters via our proprietary mobile app.
         </p>
       </div>
       <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
-          <h3 class="font-heading font-bold text-lg text-brand">1. Expert Data Collection</h3>
-          <p class="mt-2 text-sm text-neutral-400">Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.</p>
+          <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card1_h3">1. Expert Data Collection</h3>
+          <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card1_p">Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.</p>
         </div>
         <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
-          <h3 class="font-heading font-bold text-lg text-brand">2. AI Model Training</h3>
-          <p class="mt-2 text-sm text-neutral-400">This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.</p>
+          <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card2_h3">2. AI Model Training</h3>
+          <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card2_p">This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.</p>
         </div>
         <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
-          <h3 class="font-heading font-bold text-lg text-brand">3. Predictive Formulation</h3>
-          <p class="mt-2 text-sm text-neutral-400">The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate.</p>
+          <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card3_h3">3. Predictive Formulation</h3>
+          <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card3_p">The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate.</p>
         </div>
       </div>
     </div>
@@ -162,23 +165,23 @@
   <!-- Contact Form -->
   <section id="contact" class="border-t border-neutral-800">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
-      <h2 class="font-heading text-3xl font-bold">Get in Touch</h2>
-      <p class="mt-2 text-neutral-400">Have a question about our technology, our paint lines, or becoming a partner? Let us know.</p>
+      <h2 class="font-heading text-3xl font-bold" data-translate="contact_h2">Get in Touch</h2>
+      <p class="mt-2 text-neutral-400" data-translate="contact_p">Have a question about our technology, our paint lines, or becoming a partner? Let us know.</p>
       
       <form action="https://formspree.io/f/YOUR_FORMPSREE_ID" method="POST" class="mt-8 space-y-4">
         <div class="grid gap-4 sm:grid-cols-2">
-          <label class="block text-sm text-neutral-300">Name
+          <label class="block text-sm text-neutral-300" data-translate="form_name">Name
             <input name="name" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
           </label>
-          <label class="block text-sm text-neutral-300">Email
+          <label class="block text-sm text-neutral-300" data-translate="form_email">Email
             <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
           </label>
         </div>
-        <label class="block text-sm text-neutral-300">Your Message
-          <textarea name="message" rows="5" placeholder="I'd like to know more about..." class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand"></textarea>
+        <label class="block text-sm text-neutral-300" data-translate="form_message">Your Message
+          <textarea name="message" rows="5" placeholder="I'd like to know more about..." class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" data-translate="form_placeholder"></textarea>
         </label>
-        <button class="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark">Send Message</button>
-        <p class="text-xs text-neutral-500 pt-1">Or email us directly at <a class="underline hover:text-brand" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
+        <button class="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark" data-translate="form_send">Send Message</button>
+        <p class="text-xs text-neutral-500 pt-1" data-translate="form_or_email">Or email us directly at <a class="underline hover:text-brand" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
       </form>
     </div>
   </section>
@@ -189,14 +192,119 @@
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p>© <span id="y"></span> Auto Color Imports LLC. All rights reserved.</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-brand">Privacy Policy</a>
-          <a href="#" class="hover:text-brand">Terms of Service</a>
+          <a href="#" class="hover:text-brand" data-translate="footer_privacy">Privacy Policy</a>
+          <a href="#" class="hover:text-brand" data-translate="footer_terms">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const translations = {
+        en: {
+            nav_mission: 'Our Mission',
+            nav_brands: 'Our Brands',
+            nav_tech: 'The Technology',
+            nav_contact: 'Contact',
+            btn_ask: 'Ask a Question',
+            hero_h1: 'The Future of Color is Here.',
+            hero_h1_span: 'Data-Driven & AI-Powered.',
+            hero_p: "We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray. By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.",
+            hero_btn1: 'Learn About the Tech',
+            hero_btn2: 'Get in Touch',
+            mission_h2: 'Our Mission: Precision, Value, and Innovation',
+            mission_p: 'To provide automotive professionals with high-quality, globally-sourced tints at an exceptional value. We are committed to building a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.',
+            brands_h2: 'Introducing the Luna Base Paint Line',
+            brands_p: 'Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.',
+            brands_link: 'Become a Partner →',
+            tech_h2: 'The Technology Behind the Match',
+            tech_p: 'Our system is built on a foundation of real-world data, collected by expert painters via our proprietary mobile app.',
+            tech_card1_h3: '1. Expert Data Collection',
+            tech_card1_p: 'Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.',
+            tech_card2_h3: '2. AI Model Training',
+            tech_card2_p: 'This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.',
+            tech_card3_h3: '3. Predictive Formulation',
+            tech_card3_p: 'The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate.',
+            contact_h2: 'Get in Touch',
+            contact_p: 'Have a question about our technology, our paint lines, or becoming a partner? Let us know.',
+            form_name: 'Name',
+            form_email: 'Email',
+            form_message: 'Your Message',
+            form_placeholder: "I'd like to know more about...",
+            form_send: 'Send Message',
+            form_or_email: 'Or email us directly at',
+            footer_privacy: 'Privacy Policy',
+            footer_terms: 'Terms of Service',
+        },
+        es: {
+            nav_mission: 'Nuestra Misión',
+            nav_brands: 'Nuestras Marcas',
+            nav_tech: 'La Tecnología',
+            nav_contact: 'Contacto',
+            btn_ask: 'Hacer una Pregunta',
+            hero_h1: 'El Futuro del Color está Aquí.',
+            hero_h1_span: 'Impulsado por Datos e IA.',
+            hero_p: 'Estamos construyendo un sistema revolucionario de pintura automotriz diseñado para ofrecer una coincidencia del 95% o más en la primera aplicación. Aprovechando datos de expertos e inteligencia artificial, estamos creando un flujo de trabajo más inteligente que ahorra tiempo y reduce el desperdicio de material.',
+            hero_btn1: 'Conoce la Tecnología',
+            hero_btn2: 'Ponte en Contacto',
+            mission_h2: 'Nuestra Misión: Precisión, Valor e Innovación',
+            mission_p: 'Proveer a los profesionales automotrices con tintes de alta calidad de origen global a un valor excepcional. Estamos comprometidos a construir un flujo de trabajo más inteligente y eficiente para el taller moderno integrando tecnología de punta con experiencia práctica.',
+            brands_h2: 'Presentamos la Línea de Pintura Luna Base',
+            brands_p: 'Luna Base es nuestra línea principal de bases, transparentes, imprimadores y toners, diseñada para una calidad y valor excepcionales. Sirve como la base de nuestra recopilación de datos y desarrollo de IA, preparando el camino para una nueva generación de soluciones de color inteligentes.',
+            brands_link: 'Conviértete en Socio →',
+            tech_h2: 'La Tecnología Detrás de la Coincidencia',
+            tech_p: 'Nuestro sistema se basa en una fundación de datos del mundo real, recopilados por pintores expertos a través de nuestra aplicación móvil patentada.',
+            tech_card1_h3: '1. Recopilación de Datos por Expertos',
+            tech_card1_p: 'Nuestra aplicación ACI Color Match permite a los técnicos expertos registrar cada detalle de sus exitosas coincidencias manuales, creando un conjunto de datos de alta fidelidad.',
+            tech_card2_h3: '2. Entrenamiento de Modelos de IA',
+            tech_card2_p: 'Estos datos se utilizan de forma anónima para entrenar nuestros modelos de IA de próxima generación, enseñándoles los matices sutiles de la formulación de colores que van más allá de las simples lecturas de espectro.',
+            tech_card3_h3: '3. Formulación Predictiva',
+            tech_card3_p: 'El resultado es un sistema que puede predecir fórmulas de alta precisión para nuevos colores, logrando nuestro objetivo de una tasa de coincidencia del 95% o más al primer intento.',
+            contact_h2: 'Ponte en Contacto',
+            contact_p: '¿Tienes alguna pregunta sobre nuestra tecnología, nuestras líneas de pintura o cómo convertirte en socio? Háznoslo saber.',
+            form_name: 'Nombre',
+            form_email: 'Correo Electrónico',
+            form_message: 'Tu Mensaje',
+            form_placeholder: 'Me gustaría saber más sobre...',
+            form_send: 'Enviar Mensaje',
+            form_or_email: 'O envíanos un correo directamente a',
+            footer_privacy: 'Política de Privacidad',
+            footer_terms: 'Términos de Servicio',
+        }
+    };
+
+    const langToggle = document.getElementById('lang-toggle');
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function translatePage(lang) {
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.dataset.translate;
+            if (translations[lang] && translations[lang][key]) {
+                if(el.tagName === 'TEXTAREA' && el.placeholder) {
+                    el.placeholder = translations[lang][key];
+                } else if (el.tagName === 'LABEL') {
+                    // Update text node directly to not remove the input
+                    el.childNodes[0].nodeValue = translations[lang][key] + ' ';
+                } 
+                else {
+                    el.textContent = translations[lang][key];
+                }
+            }
+        });
+        langToggle.textContent = lang === 'en' ? 'Español' : 'English';
+        localStorage.setItem('lang', lang);
+    }
+
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        translatePage(currentLang);
+    });
+
+    // Initial translation
+    translatePage(currentLang);
+  </script>
 </body>
 </html>
 
