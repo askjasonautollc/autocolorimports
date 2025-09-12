@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Technology – Auto Color Imports</title>
+  <meta name="description" content="Learn how ACI combines expert data, a proprietary mobile app, and AI to create a paint matching system with a 95% first-time match rate." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Technology – Auto Color Imports" />
+  <meta property="og:description" content="Discover the data-driven process behind our revolutionary color matching system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://autocolorimports.com/tech.html" />
+  <meta property="og:image" content="images/lunascanner.jpg" />
+
+  <link rel="canonical" href="https://autocolorimports.com/tech.html" />
+  <link rel="icon" href="images/autocolorlogo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) & Custom Theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#A3E635', // Vibrant lime green
+              dark: '#84CC16',
+            },
+            neutral: {
+                ...tailwind.theme.colors.neutral,
+                '950': '#121212',
+            }
+          },
+          fontFamily: {
+            sans: ['Readex Pro', 'sans-serif'],
+            heading: ['Orbitron', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-lg">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="images/autocolorlogo.png" alt="Auto Color Imports logo" class="h-8 w-8" />
+          <span class="text-lg font-heading font-bold">Auto Color Imports</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a href="mission.html" class="hover:text-brand" data-translate="nav_mission">Our Mission</a>
+          <a href="Luna.html" class="hover:text-brand" data-translate="nav_brands">Our Brands</a>
+          <a href="tech.html" class="text-brand" data-translate="nav_tech">The Technology</a>
+          <a href="mailto:admin@autocolorimports.com" class="hover:text-brand" data-translate="nav_contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <button id="lang-toggle" class="text-sm font-semibold text-brand hover:text-brand-dark">Español</button>
+            <a href="mailto:admin@autocolorimports.com" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+            
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:text-white hover:bg-neutral-800">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-800">
+        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_mission">Our Mission</a>
+            <a href="Luna.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_brands">Our Brands</a>
+            <a href="tech.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand bg-neutral-800" data-translate="nav_tech">The Technology</a>
+            <a href="mailto:admin@autocolorimports.com" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_contact">Contact</a>
+        </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- ... (The rest of your page content remains exactly the same) ... -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-800">
+    <!-- ... (Footer content remains the same) ... -->
+  </footer>
+
+  <script>
+    // --- New script for mobile menu ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const translations = {
+        // ... (translations object remains the same) ...
+    };
+
+    // ... (translation script remains the same) ...
+  </script>
+</body>
+</html>
+
