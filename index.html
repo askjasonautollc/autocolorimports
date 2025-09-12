@@ -79,8 +79,8 @@
     <div class="absolute inset-0 halo"></div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20">
       <div class="grid items-center gap-12 lg:grid-cols-2">
-        <div>
-          <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="w-full max-w-md mb-8" />
+        <div class="text-center lg:text-left">
+          <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="w-full max-w-md mb-8 mx-auto lg:mx-0" />
           <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="hero_h1">
             The Future of Color is Here.
             <br class="hidden sm:block" />
@@ -89,7 +89,7 @@
           <p class="mt-4 text-lg text-neutral-300" data-translate="hero_p">
             We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray (Delta E < 1.5). By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.
           </p>
-          <div class="mt-8 flex flex-wrap gap-4">
+          <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
             <a href="tech.html" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark" data-translate="hero_btn1">Learn About the Tech</a>
             <a href="mailto:admin@autocolorimports.com" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white" data-translate="hero_btn2">Get in Touch</a>
           </div>
@@ -123,7 +123,7 @@
   <section id="brands" class="border-t border-neutral-800 bg-neutral-900">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid items-center gap-12 md:grid-cols-2">
-            <div>
+            <div class="text-center md:text-left">
                 <h2 class="font-heading text-3xl font-bold" data-translate="brands_h2">Introducing the Luna Base Paint Line</h2>
                 <p class="mt-4 text-neutral-300" data-translate="brands_p">Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.</p>
                 <div class="mt-6">
@@ -147,15 +147,15 @@
         </p>
       </div>
       <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
+        <div class="text-center rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
           <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card1_h3">1. Expert Data Collection</h3>
           <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card1_p">Our ACI Color Match app allows expert technicians to record every detail of their successful manual matches, creating a high-fidelity dataset.</p>
         </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
+        <div class="text-center rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
           <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card2_h3">2. AI Model Training</h3>
           <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card2_p">This data is anonymously used to train our next-generation AI models, teaching them the subtle nuances of color formulation that go beyond simple spectro readings.</p>
         </div>
-        <div class="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
+        <div class="text-center rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition-all duration-300 hover:border-brand/50 hover:bg-neutral-800/30">
           <h3 class="font-heading font-bold text-lg text-brand" data-translate="tech_card3_h3">3. Predictive Formulation</h3>
           <p class="mt-2 text-sm text-neutral-400" data-translate="tech_card3_p">The result is a system that can predict highly accurate formulas for new colors, achieving our goal of a 95%+ first-time match rate (Delta E < 1.5).</p>
         </div>
@@ -165,11 +165,11 @@
 
   <!-- Contact Form -->
   <section id="contact" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
       <h2 class="font-heading text-3xl font-bold" data-translate="contact_h2">Get in Touch</h2>
       <p class="mt-2 text-neutral-400" data-translate="contact_p">Have a question about our technology, our paint lines, or becoming a partner? Let us know.</p>
       
-      <form action="https://formspree.io/f/YOUR_FORMPSREE_ID" method="POST" class="mt-8 space-y-4">
+      <form action="https://formspree.io/f/YOUR_FORMPSREE_ID" method="POST" class="mt-8 space-y-4 text-left">
         <div class="grid gap-4 sm:grid-cols-2">
           <label class="block text-sm text-neutral-300" data-translate="form_name">Name
             <input name="name" required class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" />
@@ -181,8 +181,10 @@
         <label class="block text-sm text-neutral-300" data-translate="form_message">Your Message
           <textarea name="message" rows="5" placeholder="I'd like to know more about..." class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-brand" data-translate="form_placeholder"></textarea>
         </label>
-        <button class="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-brand-dark" data-translate="form_send">Send Message</button>
-        <p class="text-xs text-neutral-500 pt-1" data-translate="form_or_email">Or email us directly at <a class="underline text-brand hover:text-brand-dark" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
+        <div class="text-center">
+            <button class="rounded-xl bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-brand-dark" data-translate="form_send">Send Message</button>
+            <p class="text-xs text-neutral-500 pt-1" data-translate="form_or_email">Or email us directly at <a class="underline text-brand hover:text-brand-dark" href="mailto:admin@autocolorimports.com">admin@autocolorimports.com</a></p>
+        </div>
       </form>
     </div>
   </section>
@@ -190,7 +192,7 @@
   <!-- Footer -->
   <footer class="border-t border-neutral-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-neutral-400">
-      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
         <p>© <span id="y"></span> Auto Color Imports LLC. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="privacy.html" class="hover:text-brand" data-translate="footer_privacy">Privacy Policy</a>
