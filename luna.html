@@ -1,1 +1,227 @@
-test
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf--8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Brands: Luna Base – Auto Color Imports</title>
+  <meta name="description" content="Discover the Luna Base Paint Line: a complete, technology-driven system for high-quality, value-based automotive paint solutions." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Brands: Luna Base – Auto Color Imports" />
+  <meta property="og:description" content="Discover the Luna Base Paint Line: a complete, technology-driven system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://autocolorimports.com/Luna.html" />
+  <meta property="og:image" content="images/lunascanner.jpg" />
+
+  <link rel="canonical" href="https://autocolorimports.com/Luna.html" />
+  <link rel="icon" href="images/autocolorlogo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) & Custom Theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#A3E635', // Vibrant lime green
+              dark: '#84CC16',
+            },
+            neutral: {
+                ...tailwind.theme.colors.neutral,
+                '950': '#121212',
+            }
+          },
+          fontFamily: {
+            sans: ['Readex Pro', 'sans-serif'],
+            heading: ['Orbitron', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-lg">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="images/autocolorlogo.png" alt="Auto Color Imports logo" class="h-8 w-8" />
+          <span class="text-lg font-heading font-bold">Auto Color Imports</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a href="mission.html" class="hover:text-brand" data-translate="nav_mission">Our Mission</a>
+          <a href="Luna.html" class="text-brand" data-translate="nav_brands">Our Brands</a>
+          <a href="tech.html" class="hover:text-brand" data-translate="nav_tech">The Technology</a>
+          <a href="mailto:admin@autocolorimports.com" class="hover:text-brand" data-translate="nav_contact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button id="lang-toggle" class="text-sm font-semibold text-brand hover:text-brand-dark">Español</button>
+            <a href="mailto:admin@autocolorimports.com" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="py-20 text-center bg-neutral-900">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="mx-auto h-28 mb-6 rounded-2xl" />
+        <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="luna_h1">Luna Base: The Smart Paint System</h1>
+        <p class="mt-4 text-lg text-neutral-300" data-translate="luna_p">
+          More than just a premium paint line, Luna Base is a complete, technology-driven ecosystem designed for the modern body shop. It combines high-quality, value-based materials with a powerful software suite to deliver unparalleled precision and efficiency.
+        </p>
+      </div>
+    </section>
+
+    <!-- The System Section -->
+    <section class="border-t border-neutral-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h2 class="font-heading text-3xl font-bold" data-translate="system_h2">A Fully Integrated Workflow</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="system_p">
+                    The Luna Base system provides everything you need to achieve fast, accurate color matches while reducing waste. Every component is designed to work in harmony, from color capture to final application.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Image 1: Scanner -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-square rounded-2xl border border-neutral-800 bg-neutral-900 overflow-hidden">
+                        <img src="images/lunascanner.jpg" alt="Spectrometer scanning a car panel" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mt-4" data-translate="system_item1_h3">Precision Spectrometer</h3>
+                    <p class="mt-2 text-sm text-neutral-400" data-translate="system_item1_p">Capture color data at the source with our high-end, integrated spectrometer for initial formula retrieval.</p>
+                </div>
+                
+                <!-- Image 2: Mixing Rack -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-square rounded-2xl border border-neutral-800 bg-neutral-900 overflow-hidden">
+                        <img src="images/lunarack.jpg" alt="Luna Base paint mixing rack with automated stirrers" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mt-4" data-translate="system_item2_h3">Automated Mixing Rack</h3>
+                    <p class="mt-2 text-sm text-neutral-400" data-translate="system_item2_p">Our software-connected racks ensure your tints are always fresh and ready for precise dispensing.</p>
+                </div>
+
+                <!-- Image 3: Scale -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-square rounded-2xl border border-neutral-800 bg-neutral-900 overflow-hidden">
+                        <img src="images/lunascale.jpg" alt="Precision scale with Luna Base logo" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mt-4" data-translate="system_item3_h3">Integrated Precision Scale</h3>
+                    <p class="mt-2 text-sm text-neutral-400" data-translate="system_item3_p">Connect directly to our software for error-free pouring and real-time formula adjustments, guided by our mobile app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supporting Materials CTA -->
+    <section class="border-t border-neutral-800 bg-neutral-900">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <h2 class="font-heading text-3xl font-bold" data-translate="materials_h2">Backed by High-Quality Materials</h2>
+            <p class="mt-4 text-neutral-300" data-translate="materials_p">
+                The Luna Base system is supported by a full range of professional-grade materials, including clears, hardeners, primers, and reducers, all designed to complement our basecoat line and ensure a flawless finish.
+            </p>
+            <div class="mt-8">
+                <a href="mailto:admin@autocolorimports.com" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-neutral-900 hover:bg-brand-dark" data-translate="materials_btn">Inquire About Our Full Product Line</a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-neutral-400">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        <p>© <span id="y"></span> Auto Color Imports LLC. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="privacy.html" class="hover:text-brand" data-translate="footer_privacy">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-brand" data-translate="footer_terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const translations = {
+        en: {
+            nav_mission: 'Our Mission',
+            nav_brands: 'Our Brands',
+            nav_tech: 'The Technology',
+            nav_contact: 'Contact',
+            btn_ask: 'Ask a Question',
+            luna_h1: 'Luna Base: The Smart Paint System',
+            luna_p: 'More than just a premium paint line, Luna Base is a complete, technology-driven ecosystem designed for the modern body shop. It combines high-quality, value-based materials with a powerful software suite to deliver unparalleled precision and efficiency.',
+            system_h2: 'A Fully Integrated Workflow',
+            system_p: 'The Luna Base system provides everything you need to achieve fast, accurate color matches while reducing waste. Every component is designed to work in harmony, from color capture to final application.',
+            system_item1_h3: 'Precision Spectrometer',
+            system_item1_p: 'Capture color data at the source with our high-end, integrated spectrometer for initial formula retrieval.',
+            system_item2_h3: 'Automated Mixing Rack',
+            system_item2_p: 'Our software-connected racks ensure your tints are always fresh and ready for precise dispensing.',
+            system_item3_h3: 'Integrated Precision Scale',
+            system_item3_p: 'Connect directly to our software for error-free pouring and real-time formula adjustments, guided by our mobile app.',
+            materials_h2: 'Backed by High-Quality Materials',
+            materials_p: 'The Luna Base system is supported by a full range of professional-grade materials, including clears, hardeners, primers, and reducers, all designed to complement our basecoat line and ensure a flawless finish.',
+            materials_btn: 'Inquire About Our Full Product Line',
+            footer_privacy: 'Privacy Policy',
+            footer_terms: 'Terms of Service',
+        },
+        es: {
+            nav_mission: 'Nuestra Misión',
+            nav_brands: 'Nuestras Marcas',
+            nav_tech: 'La Tecnología',
+            nav_contact: 'Contacto',
+            btn_ask: 'Hacer una Pregunta',
+            luna_h1: 'Luna Base: El Sistema de Pintura Inteligente',
+            luna_p: 'Más que una simple línea de pintura premium, Luna Base es un ecosistema completo impulsado por la tecnología, diseñado para el taller de carrocería moderno. Combina materiales de alta calidad y valor con un potente software para ofrecer una precisión y eficiencia inigualables.',
+            system_h2: 'Un Flujo de Trabajo Totalmente Integrado',
+            system_p: 'El sistema Luna Base proporciona todo lo que necesitas para lograr igualaciones de color rápidas y precisas, reduciendo al mismo tiempo el desperdicio. Cada componente está diseñado para funcionar en armonía, desde la captura del color hasta la aplicación final.',
+            system_item1_h3: 'Espectrómetro de Precisión',
+            system_item1_p: 'Capture datos de color en la fuente con nuestro espectrómetro integrado de alta gama para la recuperación inicial de la fórmula.',
+            system_item2_h3: 'Rack de Mezcla Automatizado',
+            system_item2_p: 'Nuestros racks conectados por software aseguran que sus tintes estén siempre frescos y listos para una dosificación precisa.',
+            system_item3_h3: 'Báscula de Precisión Integrada',
+            system_item3_p: 'Conéctese directamente a nuestro software para un vertido sin errores y ajustes de fórmula en tiempo real, guiado por nuestra aplicación móvil.',
+            materials_h2: 'Respaldado por Materiales de Alta Calidad',
+            materials_p: 'El sistema Luna Base está respaldado por una gama completa de materiales de grado profesional, incluyendo transparentes, endurecedores, imprimadores y reductores, todos diseñados para complementar nuestra línea de base y asegurar un acabado impecable.',
+            materials_btn: 'Consulte sobre Nuestra Línea Completa de Productos',
+            footer_privacy: 'Política de Privacidad',
+            footer_terms: 'Términos de Servicio',
+        }
+    };
+
+    const langToggle = document.getElementById('lang-toggle');
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function translatePage(lang) {
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.dataset.translate;
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+        langToggle.textContent = lang === 'en' ? 'Español' : 'English';
+        localStorage.setItem('lang', lang);
+    }
+
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        translatePage(currentLang);
+    });
+
+    // Initial translation
+    translatePage(currentLang);
+  </script>
+</body>
+</html>
+
