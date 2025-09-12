@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Mission – Auto Color Imports</title>
+  <meta name="description" content="Learn about our mission to deliver precision, value, and innovation to the automotive paint industry through technology and high-quality products." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Mission – Auto Color Imports" />
+  <meta property="og:description" content="Learn about our mission to deliver precision, value, and innovation to the automotive paint industry." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://autocolorimports.com/mission.html" />
+  <meta property="og:image" content="images/lunascanner.jpg" />
+
+  <link rel="canonical" href="https://autocolorimports.com/mission.html" />
+  <link rel="icon" href="images/autocolorlogo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) & Custom Theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#A3E635', // Vibrant lime green from logo
+              dark: '#84CC16',   // Darker lime for hover
+            },
+            neutral: {
+                ...tailwind.theme.colors.neutral,
+                '950': '#121212', // Deeper black to match app
+            }
+          },
+          fontFamily: {
+            sans: ['Readex Pro', 'sans-serif'],
+            heading: ['Orbitron', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-lg">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="images/autocolorlogo.png" alt="Auto Color Imports logo" class="h-8 w-8" />
+          <span class="text-lg font-heading font-bold">Auto Color Imports</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+          <a href="mission.html" class="text-brand" data-translate="nav_mission">Our Mission</a>
+          <a href="Luna.html" class="hover:text-brand" data-translate="nav_brands">Our Brands</a>
+          <a href="tech.html" class="hover:text-brand" data-translate="nav_tech">The Technology</a>
+          <a href="mailto:admin@autocolorimports.com" class="hover:text-brand" data-translate="nav_contact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button id="lang-toggle" class="text-sm font-semibold text-brand hover:text-brand-dark">Español</button>
+            <a href="mailto:admin@autocolorimports.com" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="mission_h1">Our Mission</h1>
+        <p class="mt-4 text-lg text-neutral-300" data-translate="mission_p">
+          To build a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.
+        </p>
+      </div>
+    </section>
+
+    <section class="border-t border-neutral-800 bg-neutral-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                
+                <!-- Pillar 1: Precision -->
+                <div>
+                    <h2 class="font-heading text-2xl font-bold text-brand" data-translate="pillar1_h2">Precision</h2>
+                    <p class="mt-2 text-neutral-400" data-translate="pillar1_p">
+                        Our primary goal is to achieve a 95% or greater first-time match rate (Delta E < 1.5). By leveraging AI and expert-validated data, we aim to eliminate costly rework and reduce the time it takes to get a perfect blend, every time.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Value -->
+                <div>
+                    <h2 class="font-heading text-2xl font-bold text-brand" data-translate="pillar2_h2">Value</h2>
+                    <p class="mt-2 text-neutral-400" data-translate="pillar2_p">
+                        We believe high-end results shouldn't come with an inaccessible price tag. By partnering with premier global suppliers and optimizing our workflow with technology, we provide professional-grade tints and supplies that deliver exceptional performance without compromising your bottom line.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Innovation -->
+                <div>
+                    <h2 class="font-heading text-2xl font-bold text-brand" data-translate="pillar3_h2">Innovation</h2>
+                    <p class="mt-2 text-neutral-400" data-translate="pillar3_p">
+                        We are a technology company first. From our data-collecting mobile app to our investment in AI-powered formulation, we are dedicated to pushing the boundaries of the automotive paint industry. We're building the tools that will define the future of the modern, efficient body shop.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-neutral-400">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        <p>© <span id="y"></span> Auto Color Imports LLC. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="privacy.html" class="hover:text-brand" data-translate="footer_privacy">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-brand" data-translate="footer_terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const translations = {
+        en: {
+            nav_mission: 'Our Mission',
+            nav_brands: 'Our Brands',
+            nav_tech: 'The Technology',
+            nav_contact: 'Contact',
+            btn_ask: 'Ask a Question',
+            mission_h1: 'Our Mission',
+            mission_p: 'To build a smarter, more efficient workflow for the modern body shop by integrating cutting-edge technology with hands-on expertise.',
+            pillar1_h2: 'Precision',
+            pillar1_p: 'Our primary goal is to achieve a 95% or greater first-time match rate (Delta E < 1.5). By leveraging AI and expert-validated data, we aim to eliminate costly rework and reduce the time it takes to get a perfect blend, every time.',
+            pillar2_h2: 'Value',
+            pillar2_p: "We believe high-end results shouldn't come with an inaccessible price tag. By partnering with premier global suppliers and optimizing our workflow with technology, we provide professional-grade tints and supplies that deliver exceptional performance without compromising your bottom line.",
+            pillar3_h2: 'Innovation',
+            pillar3_p: "We are a technology company first. From our data-collecting mobile app to our investment in AI-powered formulation, we are dedicated to pushing the boundaries of the automotive paint industry. We're building the tools that will define the future of the modern, efficient body shop.",
+            footer_privacy: 'Privacy Policy',
+            footer_terms: 'Terms of Service',
+        },
+        es: {
+            nav_mission: 'Nuestra Misión',
+            nav_brands: 'Nuestras Marcas',
+            nav_tech: 'La Tecnología',
+            nav_contact: 'Contacto',
+            btn_ask: 'Hacer una Pregunta',
+            mission_h1: 'Nuestra Misión',
+            mission_p: 'Construir un flujo de trabajo más inteligente y eficiente para el taller moderno, integrando tecnología de punta con experiencia práctica.',
+            pillar1_h2: 'Precisión',
+            pillar1_p: 'Nuestro objetivo principal es lograr una tasa de coincidencia del 95% o más en el primer intento (Delta E < 1.5). Aprovechando la IA y los datos validados por expertos, buscamos eliminar el costoso retrabajo y reducir el tiempo necesario para obtener una mezcla perfecta, siempre.',
+            pillar2_h2: 'Valor',
+            pillar2_p: 'Creemos que los resultados de alta gama no deberían tener un precio inaccesible. Al asociarnos con proveedores globales de primer nivel y optimizar nuestro flujo de trabajo con tecnología, ofrecemos tintes y suministros de grado profesional que brindan un rendimiento excepcional sin comprometer su rentabilidad.',
+            pillar3_h2: 'Innovación',
+            pillar3_p: 'Somos una empresa de tecnología primero. Desde nuestra aplicación móvil de recopilación de datos hasta nuestra inversión en formulación impulsada por IA, estamos dedicados a expandir los límites de la industria de la pintura automotriz. Estamos construyendo las herramientas que definirán el futuro del taller moderno y eficiente.',
+            footer_privacy: 'Política de Privacidad',
+            footer_terms: 'Términos de Servicio',
+        }
+    };
+
+    const langToggle = document.getElementById('lang-toggle');
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function translatePage(lang) {
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.dataset.translate;
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+        langToggle.textContent = lang === 'en' ? 'Español' : 'English';
+        localStorage.setItem('lang', lang);
+    }
+
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        translatePage(currentLang);
+    });
+
+    // Initial translation
+    translatePage(currentLang);
+  </script>
+</body>
+</html>
