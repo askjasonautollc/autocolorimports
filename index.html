@@ -64,13 +64,28 @@
           <a href="mission.html" class="hover:text-brand" data-translate="nav_mission">Our Mission</a>
           <a href="Luna.html" class="hover:text-brand" data-translate="nav_brands">Our Brands</a>
           <a href="tech.html" class="hover:text-brand" data-translate="nav_tech">The Technology</a>
-          <a href="mailto:admin@autocolorimports.com" class="hover:text-brand" data-translate="nav_contact">Contact</a>
+          <a href="#contact" class="hover:text-brand" data-translate="nav_contact">Contact</a>
         </nav>
         <div class="flex items-center gap-4">
             <button id="lang-toggle" class="text-sm font-semibold text-brand hover:text-brand-dark">Español</button>
-            <a href="mailto:admin@autocolorimports.com" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+            <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" data-translate="btn_ask">Ask a Question</a>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-neutral-300 hover:text-white hover:bg-neutral-800">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
       </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-800">
+        <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_mission">Our Mission</a>
+            <a href="Luna.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_brands">Our Brands</a>
+            <a href="tech.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_tech">The Technology</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800" data-translate="nav_contact">Contact</a>
+        </nav>
     </div>
   </header>
 
@@ -79,19 +94,17 @@
     <div class="absolute inset-0 halo"></div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20">
       <div class="grid items-center gap-12 lg:grid-cols-2">
-        <div class="text-center">
-          <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="w-full max-w-md mb-8 mx-auto rounded-2xl" />
+        <div class="text-center lg:text-left">
+          <img src="images/LunaLogo.jpg" alt="Luna Base Automotive Paint Logo" class="w-full max-w-md mb-8 mx-auto lg:mx-0 rounded-2xl" />
           <h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl" data-translate="hero_h1">
             The Future of Color is Here.
-            <br class="hidden sm:block" />
-            <span class="text-brand" data-translate="hero_h1_span">Data-Driven & AI-Powered.</span>
           </h1>
           <p class="mt-4 text-lg text-neutral-300" data-translate="hero_p">
             We are building a revolutionary automotive paint system designed to deliver a 95% or greater match on the first spray (Delta E < 1.5). By leveraging expert data and artificial intelligence, we're creating a smarter workflow that saves time and reduces material waste.
           </p>
-          <div class="mt-8 flex flex-wrap gap-4 justify-center">
+          <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
             <a href="tech.html" class="rounded-xl bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark" data-translate="hero_btn1">Learn About the Tech</a>
-            <a href="mailto:admin@autocolorimports.com" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white" data-translate="hero_btn2">Get in Touch</a>
+            <a href="#contact" class="rounded-xl border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white" data-translate="hero_btn2">Get in Touch</a>
           </div>
         </div>
         <div class="relative">
@@ -123,11 +136,11 @@
   <section id="brands" class="border-t border-neutral-800 bg-neutral-900">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid items-center gap-12 md:grid-cols-2">
-            <div class="text-center">
+            <div class="text-center md:text-left">
                 <h2 class="font-heading text-3xl font-bold" data-translate="brands_h2">Introducing the Luna Base Paint Line</h2>
                 <p class="mt-4 text-neutral-300" data-translate="brands_p">Luna Base is our premier line of basecoats, clears, primers, and toners, engineered for exceptional quality and value. It serves as the foundation of our data collection and AI development, paving the way for a new generation of smart color solutions.</p>
                 <div class="mt-6">
-                    <a href="mailto:admin@autocolorimports.com" class="text-sm font-semibold text-brand hover:text-brand-dark" data-translate="brands_link">Become a Partner →</a>
+                    <a href="#contact" class="text-sm font-semibold text-brand hover:text-brand-dark" data-translate="brands_link">Become a Partner →</a>
                 </div>
             </div>
             <div class="flex justify-center rounded-2xl bg-white/5 p-8">
@@ -189,6 +202,16 @@
     </div>
   </section>
 
+  <!-- Location Section -->
+  <section id="location" class="border-t border-neutral-800 bg-neutral-900">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <h2 class="font-heading text-3xl font-bold" data-translate="location_h2">Based in Florida, Shipping Nationwide</h2>
+          <p class="mt-4 max-w-3xl mx-auto text-lg text-neutral-400" data-translate="location_p">
+              Our headquarters, lab, and primary warehouse are located in Orlando, FL, strategically positioned to serve the Southeast region. However, we are experienced and fully capable of shipping complete, ready-to-operate paint tint lines across all 48 contiguous states.
+          </p>
+      </div>
+  </section>
+
   <!-- Footer -->
   <footer class="border-t border-neutral-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-neutral-400">
@@ -203,6 +226,13 @@
   </footer>
 
   <script>
+    // Script for mobile menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
     document.getElementById('y').textContent = new Date().getFullYear();
 
     const translations = {
@@ -238,6 +268,8 @@
             form_placeholder: "I'd like to know more about...",
             form_send: 'Send Message',
             form_or_email: 'Or email us directly at',
+            location_h2: 'Based in Florida, Shipping Nationwide',
+            location_p: 'Our headquarters, lab, and primary warehouse are located in Orlando, FL, strategically positioned to serve the Southeast region. However, we are experienced and fully capable of shipping complete, ready-to-operate paint tint lines across all 48 contiguous states.',
             footer_privacy: 'Privacy Policy',
             footer_terms: 'Terms of Service',
         },
@@ -273,6 +305,8 @@
             form_placeholder: 'Me gustaría saber más sobre...',
             form_send: 'Enviar Mensaje',
             form_or_email: 'O envíanos un correo directamente a',
+            location_h2: 'Ubicados en Florida, con Envío a Nivel Nacional',
+            location_p: 'Nuestra sede, laboratorio y almacén principal se encuentran en Orlando, FL, estratégicamente posicionados para servir a la región sureste. Sin embargo, tenemos experiencia y plena capacidad para enviar líneas completas de tintes de pintura, listas para operar, a los 48 estados contiguos.',
             footer_privacy: 'Política de Privacidad',
             footer_terms: 'Términos de Servicio',
         }
@@ -288,7 +322,6 @@
                 if(el.tagName === 'TEXTAREA' && el.placeholder) {
                     el.placeholder = translations[lang][key];
                 } else if (el.tagName === 'LABEL') {
-                    // Update text node directly to not remove the input
                     el.childNodes[0].nodeValue = translations[lang][key] + ' ';
                 } 
                 else {
@@ -310,3 +343,4 @@
   </script>
 </body>
 </html>
+
